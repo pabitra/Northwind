@@ -1,0 +1,25 @@
+﻿version: "3.1"
+
+services:
+  sqlserver:
+    container_name: "sqlserver_local"
+    image: "microsoft/mssql-server-linux:latest"
+    restart: "always"
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Pabitra@123"
+      ACCEPT_EULA: "Y"
+      MSSQL_AGENT_ENDABLED: "true"
+    volumes:
+      - sqldata:/Volumes/Macintosh HD/Users/pabitramohaptra/bc/sqlserver   
+    networks:
+      mynetwork:
+        aliases: 
+          - db1.local.dev
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  sqldata: {}
