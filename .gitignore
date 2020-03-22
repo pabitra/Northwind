@@ -6,3 +6,4 @@ node_modules
 Northwind.Api/bin
 Northwind.Api/
 .DS_Store
+.bowerrc
