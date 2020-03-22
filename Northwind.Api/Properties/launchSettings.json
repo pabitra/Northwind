@@ -20,7 +20,7 @@
     "Northwind.Api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api/v1/products",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

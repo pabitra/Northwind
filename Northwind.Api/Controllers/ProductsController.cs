@@ -6,22 +6,29 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Northwind.Api.Domain;
 using Northwind.Api.Request;
+using Northwind.Api.ViewModels;
 
 namespace Northwind.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
-    public class CustomersController : ControllerBase
+    public class ProductsController : BaseNorthwindController
     {
-        IMediator _mediator;
 
-        public CustomersController(IMediator mediator)
+        public ProductsController(IMediator mediator) : base(mediator)
         {
-            _mediator = mediator;
         }
+
+        [HttpGet("{pageSize:int}/{pageNumber:int}/{orderBy:alpha?}")]
+        public async Task<ActionResult<IList<ProductViewModel>>> Get(int pageSize, int pageNumber, string orderBy = "")
+        {
+            var getPagesProductRequestCommand = new GetPagedProduct() { PageSize = pageSize, PageNumber = pageNumber, OrderBy = orderBy };
+            return await _mediator.Send(getPagesProductRequestCommand);
+        }
+
         // GET api/values
         [HttpGet]
-        public  async Task<ActionResult<IList<Product>>> Get()
+        public  async Task<ActionResult<IList<ProductViewModel>>> Get()
         {
             var  getAllProduct = new GetAllProduct();
             return await _mediator.Send(getAllProduct);
@@ -29,7 +36,7 @@ namespace Northwind.Api.Controllers
 
         // GET api/v1/products/1
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> Get(int ProductId)
+        public async Task<ActionResult<ProductViewModel>> Get(int ProductId)
         {
             var getProductById = new GetProductById { ProductId= ProductId };
             return await _mediator.Send(getProductById);
@@ -37,7 +44,7 @@ namespace Northwind.Api.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Product product)
         {
 
         }

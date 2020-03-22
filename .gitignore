@@ -1,2 +1,8 @@
 node_modules
 .idea
+.vs/Northwind/xs/project-cache/
+.vs/Northwind/xs/sqlite3/
+.vscode/
+Northwind.Api/bin
+Northwind.Api/
+.DS_Store

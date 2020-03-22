@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Northwind.Api.Domain
+namespace Northwind.Api.ViewModels
 {
-    public class Product
+    public class ProductViewModel
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key]
-        public int ProductId { get; set; }
+        public int ProductID { get; set; }
         public string ProductName { get; set; }
         public int SupplierID { get; set; }
         public int CategoryID { get; set; }
@@ -19,7 +13,8 @@ namespace Northwind.Api.Domain
         public short UnitsOnOrder { get; set; }
         public short ReorderLevel { get; set; }
         public bool Discontinued { get; set; }
-        public Category Category { get; set; }
-        public Supplier Supplier { get; set; }
+        public string CategoryName { get; set; }
+        public string SupplierName { get; set; }
     }
+
 }

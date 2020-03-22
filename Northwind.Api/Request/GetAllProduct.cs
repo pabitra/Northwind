@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MediatR;
-using Northwind.Api.Domain;
+using Northwind.Api.ViewModels;
 
 namespace Northwind.Api.Request
 {
-    public class GetAllProduct : IRequest<List<Product>>
+    public class GetAllProduct : IRequest<List<ProductViewModel>>
     {
        
     }

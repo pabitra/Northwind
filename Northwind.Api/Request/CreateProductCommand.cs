@@ -1,4 +1,7 @@
 ﻿using System;
+using MediatR;
+using Northwind.Api.Response;
+
 namespace Northwind.Api.Request
 {
     public class CreateProductCommand: IRequest<ApiResponse<string>>

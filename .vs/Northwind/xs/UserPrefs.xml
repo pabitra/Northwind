@@ -1,17 +1,34 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{7937349D-BF32-4494-B932-2EE12C170413}|Default">
-  <MonoDevelop.Ide.ItemProperties.Northwind.Api PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{06662721-A027-403E-AAC5-F6CCBCCCEB33}|Default">
+  <MonoDevelop.Ide.ItemProperties.Northwind.Api PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Northwind.Api/Handlers/ProductByIdHandler.cs">
     <Files>
+      <File FileName="Northwind.Api/Domain/Employee.cs" Line="22" Column="41" />
+      <File FileName="Northwind.Api/Domain/Category.cs" Line="1" Column="1" />
+      <File FileName="Northwind.Api/DataAccess/NorthwindPopulator.cs" Line="1" Column="1" />
+      <File FileName="Northwind.Api/DataAccess/NorthwindDbContext.cs" Line="27" Column="64" />
+      <File FileName="Northwind.Api/Domain/Product.cs" Line="14" Column="30" />
+      <File FileName="Northwind.Api/Domain/Supplier.cs" Line="24" Column="43" />
+      <File FileName="Northwind.Api/ViewModels/ProductViewModel.cs" Line="11" Column="47" />
+      <File FileName="Northwind.Api/Handlers/ProductByIdHandler.cs" Line="25" Column="1" />
+      <File FileName="Northwind.Api/Handlers/ProductPagedHandler.cs" Line="48" Column="112" />
+      <File FileName="Northwind.Api/Handlers/ProductsQueryHandler.cs" Line="31" Column="112" />
+      <File FileName="Northwind.Api/Handlers/ProductQueryBySupplierId.cs" Line="1" Column="1" />
+      <File FileName="Northwind.Api/Handlers/ProductDiscontineCommand.cs" Line="1" Column="1" />
       <File FileName="Northwind.Api/Handlers/ProductCreateCommand.cs" Line="1" Column="1" />
-      <File FileName="Northwind.Api/Request/CreateProductCommand.cs" Line="18" Column="46" />
-      <File FileName="Northwind.Api/Domain/Product.cs" Line="9" Column="9" />
-      <File FileName="Northwind.Api/Response/ApiResponse.cs" Line="5" Column="42" />
-      <File FileName="Northwind.Api/Controllers/CustomersController.cs" Line="31" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Northwind" selected="True" />
+          <Node name="Northwind" expanded="True">
+            <Node name="Northwind.Api" expanded="True">
+              <Node name="DataAccess" expanded="True" />
+              <Node name="Domain" expanded="True" />
+              <Node name="Handlers" expanded="True">
+                <Node name="ProductByIdHandler.cs" selected="True" />
+              </Node>
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
