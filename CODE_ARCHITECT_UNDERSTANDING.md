@@ -3,7 +3,7 @@
 ## Task Context
 - Detected stack: .NET
 - Instruction: Test
-- User story: Upgrade the .net project from .net core to 3.1 to .net core 8, build the project after migration, confimr the upgrade
+- User story: Upgrade the repo to dotnet latest dotnet version
 
 ## Repository Scan Summary
 - Scanned file count: 276
